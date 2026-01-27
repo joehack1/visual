@@ -17,9 +17,11 @@ window.addEventListener('scroll', () => {
     const bgContainer = document.getElementById('bg-container');
 
     if (bgContainer) {
-        if (scrollPercent < 0.33) {
+        if (scrollPercent < 0.25) {
+            bgContainer.style.backgroundImage = "url('bg.jpg')";
+        } else if (scrollPercent < 0.5) {
             bgContainer.style.backgroundImage = "url('bg1.jpg')";
-        } else if (scrollPercent < 0.66) {
+        } else if (scrollPercent < 0.75) {
             bgContainer.style.backgroundImage = "url('bg2.jpg')";
         } else {
             bgContainer.style.backgroundImage = "url('bg3.jpg')";
